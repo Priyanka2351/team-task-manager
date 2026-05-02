@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Task Manager</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="badge">College Assignment · 2026</div>
+    <h1>Team Task Manager</h1>
+    <p class="subtitle">Track your team's work — add, view, and complete tasks</p>
+  </header>
+
+  <main>
+
+    <!-- Add Task Card -->
+    <div class="add-task-card">
+      <label for="taskInput">New Task</label>
+      <div class="input-row">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="e.g. Design the homepage layout…"
+          autocomplete="off"
+          maxlength="200"
+        />
+        <button id="addBtn">+ Add Task</button>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <div class="stat-chip">
+        <span class="num" id="totalCount">0</span>
+        <span class="lbl">Total</span>
+      </div>
+      <div class="stat-chip chip-pending">
+        <span class="num" id="pendingCount">0</span>
+        <span class="lbl">Pending</span>
+      </div>
+      <div class="stat-chip chip-done">
+        <span class="num" id="doneCount">0</span>
+        <span class="lbl">Completed</span>
+      </div>
+    </div>
+
+    <!-- Task List -->
+    <div>
+      <div class="task-list-header">
+        <h2>Tasks</h2>
+      </div>
+      <ul id="taskList">
+        <div class="spinner"></div>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- Toast notification -->
+  <div id="toast"></div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
